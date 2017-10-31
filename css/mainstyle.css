@@ -1,0 +1,211 @@
+body, html {
+height: 100%;
+margin: 0;
+font: 400 15px/1.8 "Ubuntu", sans-serif;
+color: #777;
+justify-content: center;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+position: relative;
+opacity: 0.75;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.bgimg-1 {
+background-image: url("../images/img_parallax.jpg");
+min-height: 100%;
+}
+
+.bgimg-2 {
+background-image: url("../images/img_parallax2.jpg");
+min-height: 400px;
+}
+
+.bgimg-3 {
+background-image: url("../images/img_parallax3.jpg");
+min-height: 400px;
+}
+
+.bgimg-4 {
+background-image: url("../images/img_parallax4.jpg");
+min-height: 100%;
+}
+
+#profilepicture {
+    background-color: #000;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background: url(../images/profilepic.jpg);
+    background-size: 300px, 300px;
+    background-repeat: no-repeat;
+}
+
+.caption {
+position: absolute;
+left: 0;
+top: 50%;
+width: 100%;
+text-align: center;
+color: #000;
+}
+
+.bottomscroll {
+        height: 20px;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -10px;
+        position: absolute;
+        bottom: 5%;
+        width: 20px;
+}
+
+.caption span.border {
+background-color: #111;
+color: #ff6600;
+padding: 18px;
+font-size: 25px;
+letter-spacing: 10px;
+}
+
+h3 {
+letter-spacing: 5px;
+text-transform: uppercase;
+font: 20px "Ubuntu", sans-serif;
+color: #111;
+}
+
+a {
+  background-color:transparent;
+  font-size:25px;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+p{
+    text-align: center;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    align-self: center;
+    max-width: 1340px;
+    text-align: center;
+    margin: auto;
+}
+
+.block {
+    background: #000;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    background-size: cover;
+    border: 3px solid white;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    align-self: center;
+    transition: .25s linear;
+    text-align: center;
+}
+
+.name {
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .2s;
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    text-shadow: 0 0 3.5px rgba(0, 0, 0, 0.75);
+    flex-wrap: wrap;
+}
+
+.name div:first-of-type {
+    font-family: "Ubuntu", sans-serif;
+    color: #ff6600;
+    font-size: 24px;
+}
+
+.name div:last-of-type {
+    font-family: "Ubuntu", sans-serif;
+    margin-top: -25px;
+    color: #fff;
+}
+
+.block:last-of-type {
+    margin-right: 0;
+}
+
+.sixdegrees {background-image: url(../images/albumart/6doit.jpg)}
+.skyblue {background-image: url(../images/albumart/skyblue.jpg)}
+.joyofmotion {background-image: url(../images/albumart/joyofmotion.jpg)}
+.hce {background-image: url(../images/albumart/handcannoterase.jpg)}
+.movingpictures {background-image: url(../images/albumart/movingpictures.jpg)}
+
+
+/* Skills bar effects */
+
+
+.skillbar {
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+  }
+  
+  .skillbar-bar {
+    height: 35px;
+    width: 0px;
+    background: #6adcfa;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  
+  .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
+  }
