@@ -1,40 +1,87 @@
-body, html {
-height: 100%;
-margin: 0;
-font: 400 15px/1.8 "Ubuntu", sans-serif;
-color: #777;
-justify-content: center;
+/*  MATTHEW WATT STYLESHEET
+    PLEASE DON'T STEAL
+    K THANKS                */
+
+
+/* UNIVERSAL MODIFIERS */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Ubuntu", sans-serif;
+    color: #777;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Ubuntu", sans-serif;
+    color: #111;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-position: relative;
-opacity: 0.75;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-
+a {
+    background-color: transparent;
+    font-size: 25px;
+    color: #f7f7f7;
+    text-decoration: none;
 }
+
+p {
+    text-align: center;
+}
+
+/* END UNIVERSAL MODIFIERS */
+
+/* PARALLAX STUFF */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bgimg-1 {
-background-image: url("../images/img_parallax.jpg");
-min-height: 100%;
+    background-image: url("../images/img_parallax.jpg");
+    min-height: 100%;
 }
 
 .bgimg-2 {
-background-image: url("../images/img_parallax2.jpg");
-min-height: 400px;
+    background-image: url("../images/img_parallax2.jpg");
+    min-height: 400px;
 }
 
 .bgimg-3 {
-background-image: url("../images/img_parallax3.jpg");
-min-height: 400px;
+    background-image: url("../images/img_parallax3.jpg");
+    min-height: 400px;
 }
 
 .bgimg-4 {
-background-image: url("../images/img_parallax4.jpg");
-min-height: 100%;
+    background-image: url("../images/img_parallax4.jpg");
+    min-height: 50%;
 }
 
+/* END PARALLAX STUFF */
+
+/* LOGO AT THE TOP OF PAGE */
+.headerimg {
+    height: 210px;
+    left: 50%;
+    margin-top: -105px;
+    margin-left: -656px;
+    position: absolute;
+    top: 50%;
+    width: 1312px;
+}
+
+/* PROFILE PICTURE */
 #profilepicture {
     background-color: #000;
     width: 300px;
@@ -47,58 +94,48 @@ min-height: 100%;
     background-repeat: no-repeat;
 }
 
-.caption {
-position: absolute;
-left: 0;
-top: 50%;
-width: 100%;
-text-align: center;
-color: #000;
-}
+/* TEXT ABOVE PARALLAX */
 
-.bottomscroll {
-        height: 20px;
-        left: 50%;
-        margin-top: -10px;
-        margin-left: -10px;
-        position: absolute;
-        bottom: 5%;
-        width: 20px;
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
 }
 
 .caption span.border {
-background-color: #111;
-color: #ff6600;
-padding: 18px;
-font-size: 25px;
-letter-spacing: 10px;
+    background-color: #111;
+    color: #ff6600;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
 }
 
-h3 {
-letter-spacing: 5px;
-text-transform: uppercase;
-font: 20px "Ubuntu", sans-serif;
-color: #111;
+/* ARROW AT PAGE BOTTOM */
+.bottomscroll {
+    height: 20px;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    position: absolute;
+    bottom: 5%;
+    width: 20px;
 }
 
-a {
-  background-color:transparent;
-  font-size:25px;
-  color: #f7f7f7;
-  text-decoration: none;
-}
+/* TURN OFF PARALLAX FOR MOBILE */
 
-p{
-    text-align: center;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4 {
         background-attachment: scroll;
     }
 }
 
+/* INSTRUMENTS */
 
 .wrapper {
     display: flex;
@@ -153,15 +190,29 @@ p{
     margin-right: 0;
 }
 
-.sixdegrees {background-image: url(../images/albumart/6doit.jpg)}
-.skyblue {background-image: url(../images/albumart/skyblue.jpg)}
-.joyofmotion {background-image: url(../images/albumart/joyofmotion.jpg)}
-.hce {background-image: url(../images/albumart/handcannoterase.jpg)}
-.movingpictures {background-image: url(../images/albumart/movingpictures.jpg)}
+.drums {
+    background-image: url(../images/instruments/drums.jpg)
+}
+
+.bass {
+    background-image: url(../images/instruments/bass.jpg)
+}
+
+.sixstring {
+    background-image: url(../images/instruments/6string.jpg)
+}
+
+.sevenstring {
+    background-image: url(../images/instruments/7string.jpg)
+}
+
+.keys {
+    background-image: url(../images/instruments/keys.jpg)
+}
+/* END INSTRUMENTS */
 
 
-/* Skills bar effects */
-
+/* SKILL BAR EFFECTS */
 
 .skillbar {
     position: relative;
@@ -172,15 +223,14 @@ p{
     height: 35px;
     border-radius: 3px;
     width: 100%;
-  }
-  
-  .skillbar-title {
+}
+
+.skillbar-title {
     position: absolute;
     top: 0;
     left: 0;
     width: 110px;
-    font-weight: bold;
-    font-size: 13px;
+    font: 13px "Ubuntu", sans-serif;
     color: #ffffff;
     background: #6adcfa;
     border-top-left-radius: 3px;
@@ -189,17 +239,18 @@ p{
     padding: 0 20px;
     height: 35px;
     line-height: 35px;
-  }
-  
-  .skillbar-bar {
+}
+
+.skillbar-bar {
+    margin-top:0;
     height: 35px;
     width: 0px;
     background: #6adcfa;
     border-radius: 3px;
     display: inline-block;
-  }
-  
-  .skill-bar-percent {
+}
+
+.skill-bar-percent {
     position: absolute;
     right: 10px;
     top: 0;
@@ -208,4 +259,21 @@ p{
     line-height: 35px;
     color: #ffffff;
     color: rgba(0, 0, 0, 0.4);
-  }
+}
+
+/* END SKILL BAR */
+
+
+/* SOCIAL MEDIA ICON FADE ON HOVER */
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+    opacity: 0.5;
+}
+
+/* END SOCIAL MEDIA FADE */

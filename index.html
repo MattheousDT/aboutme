@@ -1,203 +1,305 @@
 <!DOCTYPE html>
 <html>
-<head>     
-        <!-- Title Info -->
-        <title>Matthew Watt</title>
-        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <!-- Metadata -->
-        <meta http-equiv="Content-Type" content="text/html; charset=utf8" /> 
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
-        <meta property="og:title" content="Matthew Watt"/> 
-        <meta property="og:url" content="https://matthewwatt.co.uk"/> 
-        <meta property="og:image" content="meta.png"> 
-        <meta property="og:image:type" content="image/png"> 
-        <meta property="og:image:width" content="500"> 
-        <meta property="og:image:height" content="500"> 
-        <meta property="og:description" content="Ulster University Student"/>
+<!-- 
+s+//////////////////////////////////////////////+s
+s-``````````````````````````````````````````````.s
+s-``````````````````````````````````````````````.s
+s-``````````````````````````````````````````````.s
+s-/ooooo/````````:ooooo+````````````````````````.s
+s-+ssssss-``````.ossssso````````````````````````.s
+s-+sssssso.`````osssssso````````````````````````.s
+s-+sssssss+````/ssssssso````````````````````````.s
+s-+ssso/sss/``-sss+ossso````````````````````````.s
+s-+ssss-osss-.osso-sssso`..`````-----`````.-----.s
+s-+ssss:-osso+sso--sssso`o/````:sssss-````+ssss+.s
+s-+ssss/`:ssssss:`:sssso`oo````+sssss/````ossss:.s
+s-+ssss/``/ssss/``/sssso`os.``-sssssso.``-sssso..s
+s-+ssss/```+ss+```/sssso`os:``+sssosss/``/ssss+`.s
+s-+ssss/````--.```/sssso`os/`.ssso/ssso``+ssss:`.s
+s-.----.``````````.----:.oso`:sss/.ssss-`sssso.`.s
+s-````````````````````.sssss.osss-`osss+-ssss+``.s
+s-`````````````````````ossss/ssso``:ssso/ssss:``.s
+s-`````````````````````:ssssssss:``.ossssssso.``.s
+s-`````````````````````.ssssssss.```/sssssss+```.s
+s-``````````````````````/++++++/````-+++++++-```.s
+s-``````````````````````````````````````````````.s
+s-``````````````````````````````````````````````.s
+s-``````````````````````````````````````````````.s
+s+//////////////////////////////////////////////+s
 
-        <!-- Import JQuery and Stylesheets -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
-        
+Yes, that is my logo in ASCII...
+Yes, I am a nerd
+-->
+<head>
+    <!-- Title Info -->
+    <title>Matthew Watt</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- Metadata -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:title" content="Matthew Watt" />
+    <meta property="og:url" content="https://matthewwatt.co.uk" />
+    <meta property="og:image" content="meta.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:description" content="Ulster University Student" />
+
+    <!-- Import JQuery and Stylesheets -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+
 </head>
-     
+
+<!-- JQuery Skills Trigger -->
+<script>
+    //on page scroll...
+    $(document).on('scroll', function () {
+
+        //Once it has gotten to #skillsimg
+        if ($(this).scrollTop() >= $('#skillsimg').position().top) {
+
+            //activate the skillbar
+            $('.skillbar').skillBars({
+                from: 0,
+                speed: 2000,
+                interval: 100,
+                decimals: 0,
+            });
+            //stop after first time (this is so the percentages don't keep refreshing)
+            $(document).off('scroll')
+        }
+    });
+</script>
+
+
 <!-- Image 1 -->
 <div class="bgimg-1" id="top">
-  <div class="caption">
-    <span class="border">MATTHEW WATT</span>
-  </div>
-  <div class="bottomscroll">  
-  <a class="scroll" href="#biography">
-    <img src="images/arrow_down_white.png" alt="" width="20px" height="20px"></a>
-  </div>
+    <div class="headerimg">
+        <span>
+            <img src="images/headerlogo.png ">
+        </span>
+    </div>
+    <div class="bottomscroll">
+        <a class="scroll" href="#biography">
+            <img src="images/arrow_down_grey.png" alt="" width="20px" height="20px">
+        </a>
+    </div>
 </div>
 <!--End Image 1 -->
 
 <!-- Biography -->
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;" id="biography">
-  <div id="profilepicture"></div>
-  <br>
-  <h3 style="text-align:center; fill: url(images/albumart/6doit.jpg);">Hey there.</h3>
-  <p>I am a web and graphic designer from Belfast. 
-    I am currently studying Interactive Media at Ulster University</p>
-  <p><a class="scroll" href="#skillsimg">
-    <img src="images/arrow_down_grey.png" alt="" height="20px" width="20px"></a></p>
+    <div id="profilepicture"></div>
+    <br>
+    <h3 style="text-align:center; fill: url(images/albumart/6doit.jpg);">Hey there.</h3>
+    <p>I am a web and graphic designer from Belfast. I am currently studying Interactive Media at Ulster University</p>
+    <p>
+        <a class="scroll" href="#skillsimg">
+            <img src="images/arrow_down_grey.png" alt="" height="20px" width="20px">
+        </a>
+    </p>
 </div>
 <!-- End Biography-->
 
 <!-- Image 2 -->
 <div class="bgimg-2" id="skillsimg">
-  <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SKILLS</span>
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SKILLS</span>
 
-  <p><a class="scroll" href="#skills">
-    <img src="images/arrow_down_white.png" alt="" height="20px" width="20px"></a></p>
+        <p>
+            <a class="scroll" href="#skills">
+                <img src="images/arrow_down_white.png" alt="" height="20px" width="20px">
+            </a>
+        </p>
     </div>
 </div>
 <!-- End Image 2 -->
 
 <!-- Skills -->
+
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#111;text-align:center;padding:50px 80px;text-align: justify;" id="skills">
-   
-    <script>
-        
-        $(document).ready(function(){
-            
-            $('.skillbar').skillBars({
-                from: 0,
-                speed: 4000, 
-                interval: 100,
-                decimals: 0,
-            });
-            
-        });
-        
-        </script>
+    <div style="color:#ddd;background-color:#111;text-align:center;padding:50px 300px;text-align: justify;" id="skills">
+        <p>I pride myself in being fairly well rounded when it comes to media production. I am a keen photo/video editor with
+            interests in programming. Below you can see my skills in these areas laid out
+        </p>
+
+        <div class="skillbar" data-percent="90">
+            <span class="skillbar-title" style="background: #e44d26;">HTML</span>
+            <p class="skillbar-bar" style="background: #f16529;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
+
+        <div class="skillbar" data-percent="95">
+            <span class="skillbar-title" style="background: #0070ba;">CSS</span>
+            <p class="skillbar-bar" style="background: #29a8e0;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
+
+        <div class="skillbar" data-percent="65">
+            <span class="skillbar-title" style="background: #63a814;">Javascript</span>
+            <p class="skillbar-bar" style="background: #8acf17;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
+
+        <div class="skillbar" data-percent="98">
+            <span class="skillbar-title" style="background: #001d26;">Photoshop</span>
+            <p class="skillbar-bar" style="background: #00c8ff;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
+
+        <div class="skillbar" data-percent="80">
+            <span class="skillbar-title" style="background: #2a0034;">Premiere</span>
+            <p class="skillbar-bar" style="background: #ea77ff;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
+
+        <div class="skillbar" data-percent="60">
+            <span class="skillbar-title" style="background: #1f0040;">After Effects</span>
+            <p class="skillbar-bar" style="background: #d291ff;"></p>
+            <span class="skill-bar-percent"></span>
+        </div>
+        <!-- End Skill Bar -->
 
 
-    <div class="skillbar" data-percent="98">
-        <span class="skillbar-title" style="background: #d35400;">HTML5</span>
-        <p class="skillbar-bar" style="background: #e67e22;"></p>
-        <span class="skill-bar-percent"></span>
-      </div>
-      <!-- End Skill Bar -->
-      
-      <div class="skillbar" data-percent="99">
-        <span class="skillbar-title" style="background: #2980b9;">CSS3</span>
-        <p class="skillbar-bar" style="background: #3498db;"></p>
-        <span class="skill-bar-percent"></span>
-      </div>
-      <!-- End Skill Bar -->
-      
-      <div class="skillbar" data-percent="95">
-        <span class="skillbar-title" style="background: #2c3e50;">jQuery</span>
-        <p class="skillbar-bar" style="background: #2c3e50;"></p>
-        <span class="skill-bar-percent"></span>
-      </div>
-      <!-- End Skill Bar -->
-      
-      <div class="skillbar" data-percent="70">
-        <span class="skillbar-title" style="background: #46465e;">PHP</span>
-        <p class="skillbar-bar" style="background: #5a68a5;"></p>
-        <span class="skill-bar-percent"></span>
-      </div>
-      <!-- End Skill Bar -->
-
-
-    <p><a class="scroll" href="#hobbiesimg">
-        <img src="images/arrow_down_white.png" alt="" height="20px" width="20px"></a></p>
-  </div>
+        <p>
+            <a class="scroll" href="#hobbiesimg">
+                <img src="images/arrow_down_white.png" alt="" height="20px" width="20px">
+            </a>
+        </p>
+    </div>
 </div>
 <!-- End Skills -->
 
 <!-- Image 3 -->
 <div class="bgimg-3" id="hobbiesimg">
-  <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">HOBBIES & INTERESTS</span>
-    <p><a class="scroll" href="#hobbies">
-        <img src="images/arrow_down_white.png" alt="" height="20px" width="20px"></a></p>
-  </div>
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">HOBBIES & INTERESTS</span>
+        <p>
+            <a class="scroll" href="#hobbies">
+                <img src="images/arrow_down_white.png" alt="" height="20px" width="20px">
+            </a>
+        </p>
+    </div>
 </div>
 <!-- End Image 3 -->
 
 <!-- Hobbies & Interests -->
 <div style="position:relative;" id="hobbies">
-  <div style="color:#ddd;background-color:#111;text-align:center;padding:50px 80px;text-align: justify;">
-      
-    <p>In my spare time, I like to listen to music, play music, anything music. My favourite genre of music would definately be
-        anything in the realms of Progressive Rock/Metal. In 2017, I got the chance to meet the guys from Dream Theater in Cardiff
-        during their Images & Words 25th Anniversary tour. My other favourite artists would inclue Rush, Animals as Leaders, Steven Wilson, Opeth, 
-        Devin Townsend Project, Haken etc. the list goes on. I primarily play the drums and have achieved Grade 6, but I since have moved on to play Guitar and I currently play a 
-        <abbr title="Jackson JS22-7">Jackson 7 String Guitar.</abbr>
-    </p>
-    
-    <!-- Album Art JS -->
-    <section class="wrapper">
-          <div class="block joyofmotion" id="0" onclick="size(this)">
-              <aside class="name">
-                  <section>
-                      <div>The Joy of Motion</div>
-                      <br>
-                      <div>Animals as Leaders, 2014</div>
-                  </section>
-              </aside>
-          </div>
-          <div class="block hce" id="1" onclick="size(this)">
-              <aside class="name">
-                  <section>
-                      <div>Hand Cannot Erase</div>
-                      <br>
-                      <div>Steven Wilson, 2015</div>
-                  </section>
-              </aside>
-          </div>
-          <div class="block sixdegrees" id="2" onclick="size(this)">
-              <aside class="name">
-                  <section>
-                      <div>Six Degrees of Inner Turbulence</div>
-                      <br>
-                      <div>Dream Theater, 2002</div>
-                  </section>
-              </aside>
-          </div>
-          <div class="block skyblue" id="3" onclick="size(this)">
-              <aside class="name">
-                  <section>
-                      <div>Sky Blue</div>
-                      <br>
-                      <div>Devin Townsend Project, 2014</div>
-                  </section>
-              </aside>
-          </div>
-          <div class="block movingpictures" id="4" onclick="size(this)">
-              <aside class="name">
-                  <section>
-                      <div>Moving Pictures</div>
-                      <br>
-                      <div>Rush, 1981</div>
-                  </section>
-              </aside>
-          </div>
-      </section>
-    <!-- End Album Art JS -->
-    <p><a class="scroll" href="#bottom">
-        <img src="images/arrow_down_white.png" alt="" height="20px" width="20px"></a></p>
+    <div style="color:#ddd;background-color:#111;text-align:center;padding:50px 300px;text-align: justify;">
 
-  </div>
+        <p>In my spare time, I like to listen to music, play music, anything music. My favourite genre of music would definately
+            be anything in the realms of Progressive Rock/Metal. In 2017, I got the chance to meet the guys from Dream Theater
+            in Cardiff during their Images & Words 25th Anniversary tour. My other favourite artists would include Rush,
+            Animals as Leaders, Steven Wilson, Opeth, Devin Townsend Project, Haken etc. the list goes on. I primarily play
+            the drums and have achieved Grade 6, but I since have moved on to play Guitar and I currently play a
+            <abbr title="Jackson JS22-7">Jackson 7 String Guitar.</abbr> I enjoy writing and recording music in my spare time. I currently use Reaper
+            as my main
+            <abbr title="Digital Audio Workstation">DAW</abbr>, I use BIAS AMP and FX for simulating amplifiers and pedals, and a skew of Kontact libaries like GetGood
+            Drums and Native Instruments' Symphony Essentials.
+        </p>
+        <h1>My Instruments</h1>
+        <!-- Album Art JS -->
+        <section class="wrapper">
+            <div class="block sixstring" id="0" onclick="size(this)">
+                <aside class="name">
+                    <section>
+                        <div>Six String Guitar</div>
+                        <br>
+                        <div>Fender Telecaster Standard</div>
+                    </section>
+                </aside>
+            </div>
+            <div class="block sevenstring" id="1" onclick="size(this)">
+                <aside class="name">
+                    <section>
+                        <div>7 String Guitar</div>
+                        <br>
+                        <div>Jackson Dinky JS22-7</div>
+                    </section>
+                </aside>
+            </div>
+            <div class="block drums" id="2" onclick="size(this)">
+                <aside class="name">
+                    <section>
+                        <div>Drums</div>
+                        <br>
+                        <div>Mic'd up in the studio</div>
+                    </section>
+                </aside>
+            </div>
+            <div class="block bass" id="3" onclick="size(this)">
+                <aside class="name">
+                    <section>
+                        <div>4 String Bass Guitar</div>
+                        <br>
+                        <div>Squier Precision Bass</div>
+                    </section>
+                </aside>
+            </div>
+            <div class="block keys" id="4" onclick="size(this)">
+                <aside class="name">
+                    <section>
+                        <div>MIDI Keyboard</div>
+                        <br>
+                        <div>M-Audio Keystation 49es</div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+        <!-- End Album Art JS -->
+        <p>
+            <a class="scroll" href="#bottom">
+                <img src="images/arrow_down_white.png" alt="" height="20px" width="20px">
+            </a>
+        </p>
+
+    </div>
 </div>
 <!-- End Hobbies & Interests -->
 
 <!-- Image 4 -->
 <div class="bgimg-4" id="bottom">
-  <div class="caption">
-    <span class="border">YOU ARE AT THE BOTTOM. NOW GO AWAY</span>
-  </div>
+    <div class="caption">
 
-  <div class="bottomscroll">  
-    <a class="scroll" href="#top">
-      <img src="images/arrow_up_white.png" alt="" width="20px" height="20px"></a>
+        <!-- github Icon -->
+        <span class="fade">
+            <a class="scroll" href="https://github.com/MattheousDT">
+                <img src="images/socialicons/github.png" width="50px" height="50px">
+            </a>
+        </span>
+        <!-- icon divider -->
+        <span>
+            <img src="images/socialicons/icondiv.png" width="50px" height="50px">
+        </span>
+        <!-- last.fm Icon -->
+        <span class="fade">
+            <a class="scroll" href="https://www.last.fm/user/Mattheous">
+                <img src="images/socialicons/lastfm.png" width="50px" height="50px">
+            </a>
+        </span>
+        <!-- icon divider -->
+        <span>
+            <img src="images/socialicons/icondiv.png" width="50px" height="50px">
+        </span>
+        <!-- reddit Icon -->
+        <span class="fade">
+            <a class="scroll" href="https://www.reddit.com/user/RedditMattheous/">
+                <img src="images/socialicons/reddit.png" width="50px" height="50px">
+            </a>
+        </span>
+    </div>
+
+    <div class="bottomscroll">
+        <a class="scroll" href="#top">
+            <img src="images/arrow_up_white.png" alt="" width="20px" height="20px">
+        </a>
     </div>
 </div>
 <!-- End Image 4 -->
@@ -205,8 +307,9 @@
 
 <!-- Import JS Scripts -->
 <script src="js/anchorscroll.js"></script>
-<script src="js/albumart.js"></script>
+<script src="js/instruments.js"></script>
 <script src="js/skillbar.js"></script>
 
 </body>
+
 </html>
